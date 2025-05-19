@@ -1,0 +1,301 @@
+@import 'tailwindcss';
+@plugin 'tailwindcss-animate';
+
+@custom-variant dark (&:is(.dark *));
+
+@layer base {
+    :root {
+        --radius: 0.75rem; /* Slightly rounded corners */
+
+        /* Background & Foreground */
+        --background: hsl(40, 33%, 96%);
+        --foreground: hsl(0, 0%, 10%);
+
+        /* Card & Popover */
+        --card: hsl(0, 0%, 100%);
+        --card-foreground: hsl(0, 0%, 10%);
+        --popover: hsl(0, 0%, 100%);
+        --popover-foreground: hsl(0, 0%, 10%);
+
+        /* Primary: Warm Orange */
+        --primary: hsl(24, 77%, 52%);
+        --primary-foreground: hsl(0, 0%, 100%);
+
+        /* Secondary: Soft Golden Yellow */
+        --secondary: hsl(42, 89%, 61%);
+        --secondary-foreground: hsl(0, 0%, 10%);
+
+        /* Accent: Soft Peach */
+        --accent: hsl(24, 78%, 88%);
+        --accent-foreground: hsl(0, 0%, 10%);
+
+        /* Muted: Light Beige */
+        --muted: hsl(33, 36%, 81%);
+        --muted-foreground: hsl(0, 0%, 40%);
+
+        /* Destructive: Deep Red */
+        --destructive: hsl(4, 72%, 50%);
+        --destructive-foreground: hsl(0, 0%, 100%);
+
+        /* Informational: Calm Blue */
+        --info: hsl(210, 90%, 60%);
+        --info-foreground: hsl(0, 0%, 100%);
+
+        /* Success: Soft Green */
+        --success: hsl(140, 60%, 50%);
+        --success-foreground: hsl(0, 0%, 100%);
+
+        /* Warning: Vibrant Yellow */
+        --warning: hsl(45, 100%, 55%);
+        --warning-foreground: hsl(0, 0%, 10%);
+
+        /* Disabled: Subtle Gray */
+        --disabled: hsl(0, 0%, 80%);
+        --disabled-foreground: hsl(0, 0%, 40%);
+
+        /* Borders & Inputs */
+        --border: hsl(36, 24%, 70%); /* Slightly darker for better visibility */
+        --border-strong: hsl(36, 24%, 45%); /* Stronger border color */
+        --border-solid: hsl(0, 0%, 15%); /* More defined border */
+        --input: hsl(36, 29%, 86%);
+        --ring: hsl(24, 77%, 52%);
+
+        --chart-1: hsl(210, 80%, 60%);
+        --chart-2: hsl(34, 89%, 60%);
+        --chart-3: hsl(280, 70%, 60%);
+        --chart-4: hsl(160, 75%, 50%);
+        --chart-5: hsl(0, 85%, 55%);
+    }
+
+    .dark {
+        /* Background & Foreground */
+        --background: hsl(0, 0%, 9%);
+        --foreground: hsl(0, 0%, 94%);
+
+        /* Card & Popover */
+        --card: hsl(0, 0%, 12%);
+        --card-foreground: hsl(0, 0%, 94%);
+        --popover: hsl(0, 0%, 11%);
+        --popover-foreground: hsl(0, 0%, 94%);
+
+        /* Primary: Deep Orange */
+        --primary: hsl(34, 100%, 50%);
+        --primary-foreground: hsl(0, 0%, 10%);
+
+        /* Secondary: Golden Yellow */
+        --secondary: hsl(34, 100%, 65%);
+        --secondary-foreground: hsl(0, 0%, 10%);
+
+        /* Accent: Warm Peach */
+        --accent: hsl(21, 85%, 72%);
+        --accent-foreground: hsl(0, 0%, 10%);
+
+        /* Muted: Deep Gray */
+        --muted: hsl(0, 0%, 17%);
+        --muted-foreground: hsl(0, 0%, 80%);
+
+        /* Destructive: Strong Red */
+        --destructive: hsl(3, 71%, 47%);
+        --destructive-foreground: hsl(0, 0%, 100%);
+
+        /* Informational: Cool Blue */
+        --info: hsl(210, 80%, 50%);
+        --info-foreground: hsl(0, 0%, 90%);
+
+        /* Success: Soft Green */
+        --success: hsl(140, 55%, 45%);
+        --success-foreground: hsl(0, 0%, 90%);
+
+        /* Warning: Golden Yellow */
+        --warning: hsl(45, 100%, 50%);
+        --warning-foreground: hsl(0, 0%, 10%);
+
+        /* Disabled: Dark Gray */
+        --disabled: hsl(0, 0%, 30%);
+        --disabled-foreground: hsl(0, 0%, 60%);
+
+        /* Borders & Inputs */
+        --border: hsl(0, 0%, 40%);
+        --border-strong: hsl(0, 0%, 60%); /* More visible border in dark mode */
+        --border-solid: hsl(0, 0%, 100%); /* Strong solid border for better contrast */
+        --input: hsl(0, 0%, 18%);
+
+        /* Ring (focus outline) */
+        --ring: hsl(34, 100%, 50%);
+
+        --chart-1: hsl(210, 80%, 55%);
+        --chart-2: hsl(34, 89%, 55%);
+        --chart-3: hsl(280, 70%, 55%);
+        --chart-4: hsl(160, 75%, 45%);
+        --chart-5: hsl(0, 85%, 50%);
+    }
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--muted));
+    border-radius: var(--radius);
+    border: 2px solid hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(var(--muted-foreground));
+}
+
+::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-corner {
+    background: hsl(var(--background));
+}
+
+/* Firefox Scrollbar */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted)) hsl(var(--background));
+    scroll-behavior: smooth;
+}
+
+@theme inline {
+    --font-oxanium: 'Oxanium', sans-serif;
+    --font-geist-sans: 'Geist Sans', sans-serif;
+    --font-geist-mono: 'Geist Mono', monospace;
+
+    /* Custom Breakpoints */
+    --breakpoint-desktop-3xl: 1920px;
+    --breakpoint-desktop-2xl: 1700px;
+    --breakpoint-desktop-xl: 1535px;
+    --breakpoint-laptop-xl: 1279px;
+    --breakpoint-tablet-lg: 1023px;
+    --breakpoint-mobile-lg: 767px;
+    --breakpoint-mobile-sm: 639px;
+    --breakpoint-mobile-xs: 480px;
+
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+
+    --color-destructive: var(--destructive);
+    --color-destructive-foreground: var(--destructive-foreground);
+
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+
+    --color-chart-1: var(--chart-1);
+    --color-chart-2: var(--chart-2);
+    --color-chart-3: var(--chart-3);
+    --color-chart-4: var(--chart-4);
+    --color-chart-5: var(--chart-5);
+
+    --color-info: var(--info);
+    --color-info-foreground: var(--info-foreground);
+
+    --color-success: var(--success);
+    --color-success-foreground: var(--success-foreground);
+
+    --color-warning: var(--warning);
+    --color-warning-foreground: var(--warning-foreground);
+
+    --color-disabled: var(--disabled);
+    --color-disabled-foreground: var(--disabled-foreground);
+
+    --radius-lg: var(--radius);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-sm: calc(var(--radius) - 4px);
+
+    --animate-floating: floating 4s ease-in-out infinite;
+    --animate-gradient-move: gradientMove 6s infinite linear;
+    --animate-gradient-shift: gradientShift 8s infinite ease-in-out;
+
+    /* Animations */
+
+    @keyframes floating {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    @keyframes gradientMove {
+        0% {
+            transform: translateX(-10%);
+        }
+        100% {
+            transform: translateX(10%);
+        }
+    }
+
+    @keyframes gradientShift {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border outline-ring/50 m-0 p-0 box-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+    h1 {
+        @apply text-4xl font-extrabold text-foreground;
+    }
+    h2 {
+        @apply text-3xl font-bold text-foreground;
+    }
+    h3 {
+        @apply text-2xl font-semibold text-foreground;
+    }
+    h4 {
+        @apply text-xl font-medium text-foreground;
+    }
+    h5 {
+        @apply text-lg font-normal text-foreground;
+    }
+    h6 {
+        @apply text-base font-normal text-foreground;
+    }
+    p {
+        @apply text-base font-normal text-muted-foreground;
+    }
+    a {
+        @apply text-primary underline;
+    }
+    a:hover {
+        @apply text-primary/80;
+    }
+}
