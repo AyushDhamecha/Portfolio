@@ -1,50 +1,68 @@
-# Ignore node modules completely
+# --------------------------
+# Node Modules
+# --------------------------
 node_modules/
-/node_modules
 
-# Ignore Yarn Plug'n'Play files
+# --------------------------
+# Build Artifacts (Next.js / general)
+# --------------------------
+.next/
+out/
+build/
+dist/
+
+# --------------------------
+# Environment Files
+# --------------------------
+.env
+.env.* # include .env.local, .env.production, etc.
+
+# --------------------------
+# Vercel
+# --------------------------
+.vercel/
+
+# --------------------------
+# System Files
+# --------------------------
+.DS_Store
+
+# --------------------------
+# IDE / Editor Settings
+# --------------------------
+.vscode/
+.idea/
+*.idea
+
+# --------------------------
+# Log Files
+# --------------------------
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --------------------------
+# pnpm / Yarn Plug'n'Play
+# --------------------------
 .pnp/
 .pnp.*
-
-# Ignore Yarn files except necessary patches/plugins/releases
 .yarn/*
 !.yarn/patches/
 !.yarn/plugins/
 !.yarn/releases/
 !.yarn/versions/
 
-# Ignore testing coverage
-coverage/
-
-# Ignore Next.js build artifacts
-.next/
-out/
-
-# Ignore build output (for general frontend/backend projects)
-build/
-dist/
-
-# Ignore system files and IDE/editor config
-.DS_Store
-*.pem
-.vscode/
-.idea/
-*.idea
-
-# Ignore debug logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
-# Ignore environment variables
-.env
-.env.*
-
-# Ignore Vercel deployment folder
-.vercel/
-
-# Ignore TypeScript specific
+# --------------------------
+# TypeScript
+# --------------------------
 *.tsbuildinfo
 next-env.d.ts
 
+# --------------------------
+# Optional: lockfiles
+# --------------------------
+# Uncomment the one you don’t use
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml

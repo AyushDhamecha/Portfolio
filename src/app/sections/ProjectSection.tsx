@@ -48,18 +48,19 @@ const projects: Project[] = [
         demoLink: 'https://ayushdhamecha.github.io/Sort-Visualiser/',
         codeLink: 'https://github.com/AyushDhamecha/Sort-Visualiser'
     },    
-    // {
-    //     id: 3,
-    //     title: 'TalkMates - Connect, Learn, and Grow',
-    //     description:
-    //         'TalkMates is an online tutor booking platform that connects learners with expert tutors worldwide. It offers personalized learning experiences, flexible scheduling, secure payments, and global networking to help users enhance their skills in various subjects and languages. 🚀',
-    //     image: projectImage3,
-    //     color: 'bg-card',
-    //     logo: linux,
-    //     techUsed: ['React js', 'Node Js', 'Mongodb', 'Express js'],
-    //     demoLink: 'https://ph-a11.web.app/',
-    //     codeLink: '',
-    // },
+    {
+        id: 4,
+        title: 'Hiring Buddy-Agentic AI Hiring Assistant',
+        description:
+            'An end-to-end AI-powered hiring assistant that streamlines the recruitment process by automating resume parsing, candidate scoring, communication, and scheduling. It supports multi-modal inputs like videos and code samples, offers real-time analytics, and ensures local data storage for privacy. ⚙️💼',
+        image: projectImage3, // Replace with actual image import/URL
+        color: 'bg-card',
+        logo: linux, // Replace with actual logo/image identifier if available
+        techUsed: ['Next.js', 'Javascript', 'Tailwind CSS', 'Gemini 2.0', 'LocalStorage', 'ffmpeg.js'],
+        demoLink: 'https://hiringbuddy-1.onrender.com/', // Add your actual demo link
+        codeLink: 'https://github.com/AyushDhamecha/Hiring-Buddy' // Add your GitHub repo link
+    }
+    
     // {
     //     id: 4,
     //     title: 'EquiSports - Premium Sports Gear Hub',
