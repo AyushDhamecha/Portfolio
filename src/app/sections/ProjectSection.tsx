@@ -70,7 +70,7 @@ const projects: Project[] = [
         color: 'bg-card',
         logo: linux,
         techUsed: ['React js', 'Node Js', 'Mongodb', 'Express js'],
-        demoLink: 'https://ph-assignment9-fiamanillah.netlify.app/',
+        demoLink: '',
         codeLink: '',
     },
 ];
