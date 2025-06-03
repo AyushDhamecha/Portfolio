@@ -59,32 +59,20 @@ const projects: Project[] = [
         techUsed: ['Next.js', 'Javascript', 'Tailwind CSS', 'Gemini 2.0', 'LocalStorage', 'ffmpeg.js'],
         demoLink: 'https://hiringbuddy-1.onrender.com/', // Add your actual demo link
         codeLink: 'https://github.com/AyushDhamecha/Hiring-Buddy' // Add your GitHub repo link
-    }
-    
-    // {
-    //     id: 4,
-    //     title: 'EquiSports - Premium Sports Gear Hub',
-    //     description:
-    //         'EquiSports – A sleek and responsive e-commerce platform for sports enthusiasts to browse, purchase, and manage sports equipment. Features secure authentication, dynamic product management, and an interactive UI with smooth animations. Built with React, Tailwind CSS, Firebase, Node.js, Express.js, and MongoDB. 🚀',
-    //     image: projectImage4,
-    //     color: 'bg-card',
-    //     logo: linux,
-    //     techUsed: ['React js', 'Node Js', 'Mongodb', 'Express js'],
-    //     demoLink: 'https://ph-assignment-10-79f51.web.app/',
-    //     codeLink: '',
-    // },
-    // {
-    //     id: 5,
-    //     title: 'Career Craft - Your Personalized Career Guide',
-    //     description:
-    //         'Career Craft is a comprehensive career counseling platform that provides students and professionals with expert career advice, skill assessments, and personalized career roadmaps. It integrates an AI-driven recommendation system for better decision-making.',
-    //     image: projectImage5,
-    //     color: 'bg-card',
-    //     logo: linux,
-    //     techUsed: ['React js', 'Node Js', 'Mongodb', 'Express js'],
-    //     demoLink: 'https://ph-assignment9-fiamanillah.netlify.app/',
-    //     codeLink: '',
-    // },
+    },
+
+    {
+        id: 5,
+        title: 'InsightHub - Manage your Project at one place.',
+        description:
+            'Career Craft is a comprehensive career counseling platform that provides students and professionals with expert career advice, skill assessments, and personalized career roadmaps. It integrates an AI-driven recommendation system for better decision-making.',
+        image: projectImage5,
+        color: 'bg-card',
+        logo: linux,
+        techUsed: ['React js', 'Node Js', 'Mongodb', 'Express js'],
+        demoLink: 'https://ph-assignment9-fiamanillah.netlify.app/',
+        codeLink: '',
+    },
 ];
 
 const ProjectSection: React.FC = () => {
